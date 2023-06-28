@@ -1,4 +1,5 @@
 const { Schema, Types } = require('mongoose');
+const { dateFunction } = require('../utils/dateFunction');
 
 const reactionSchema = new Schema(
   {
@@ -29,4 +30,5 @@ const reactionSchema = new Schema(
   }
 );
 
+// just exports the schema, not the model
 module.exports = reactionSchema;
