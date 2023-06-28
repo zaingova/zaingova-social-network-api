@@ -11,6 +11,8 @@ This is a back-end application that will be part of a social network application
 
 ## Usage
 
+[Click here to be redirected to the GitHub repo!](https://github.com/zaingova/zaingova-social-network-api)
+
 To use this application, youll need to open your terminal and run:
 
 - `npm install`
