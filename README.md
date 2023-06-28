@@ -7,7 +7,7 @@ This is a back-end application that will be part of a social network application
 
 ## Visuals
 
-
+https://github.com/zaingova/zaingova-social-network-api/assets/127261218/dcfd17ec-9fb5-4d70-926e-083b9547fef7
 
 ## Usage
 
