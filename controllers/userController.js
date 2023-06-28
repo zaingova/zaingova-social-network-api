@@ -89,11 +89,6 @@ module.exports = {
         { runValidators: true, new: true }
       );
 
-      // if no user with that ID exists or friendId doesn't exist
-      if (!user) {
-        return res.status(404).json({ message: 'No user with that ID found or friend does not exist' });
-      }
-
       res.json(user)
     } catch (err) {
       res.status(500).json(err);
@@ -115,7 +110,7 @@ module.exports = {
         return res.status(404).json({ message: 'No user with that ID found or friend does not exist' });
       }
 
-      res.json(user)
+      res.json({ message: 'Friend deleted!' })
     } catch (err) {
       res.status(500).json(err);
     }

@@ -28,8 +28,24 @@ module.exports = {
   // creates a new thought
   async createThought(req, res) {
     try {
+      const user = await User.findOne(
+        { username: req.body.username }
+      )
+
+      if (!user) {
+        return res.status(404).json({ message: 'No user with that ID' });
+      }
+
       const thought = await Thought.create(req.body);
+
+      await User.findOneAndUpdate(
+        { username: req.body.username },
+        { $push: { thoughts: thought } },
+        { runValidators: true, new: true },
+      );
+
       res.json(thought);
+
     } catch (err) {
       res.status(500).json(err);
     }
