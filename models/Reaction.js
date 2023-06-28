@@ -1,5 +1,5 @@
 const { Schema, Types } = require('mongoose');
-const { dateFunction } = require('../utils/dateFunction');
+const { dateFunction } = require('../utils/helpers/dateFunction');
 
 const reactionSchema = new Schema(
   {
